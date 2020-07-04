@@ -78,6 +78,9 @@
 	</NMakeReBuildCommandLine>
     <NMakeCleanCommandLine>RD /S/Q ..\bin</NMakeCleanCommandLine>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>D:\OGSRmod\OGSRmod\OGSRmod\bin_x64</OutDir>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

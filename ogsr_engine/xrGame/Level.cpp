@@ -448,20 +448,15 @@ extern	Flags32	dbg_net_Draw_Flags;
 
 extern void draw_wnds_rects();
 
+#include <omp.h>
+
 void CLevel::OnRender()
 {
 	Render->BeforeWorldRender();	//--#SM+#-- +SecondVP+
-
-	inherited::OnRender	();
-	
+	inherited::OnRender();
 	Game().OnRender();
-
-	//отрисовать трассы пуль
-	//Device.Statistic->TEST1.Begin();
 	BulletManager().Render();
-	//Device.Statistic->TEST1.End();
-
-	Render->AfterWorldRender(); //--#SM+#-- +SecondVP+
+	Render->AfterWorldRender();
 
 	//отрисовать интерфейc пользователя
 	HUD().RenderUI();

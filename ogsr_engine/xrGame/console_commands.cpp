@@ -1173,7 +1173,7 @@ void CCC_RegisterCommands()
 	CMD3(CCC_Mask,				"hud_info",				&psHUD_Flags,	HUD_INFO);
 	CMD3(CCC_Mask,				"hud_draw",				&psHUD_Flags,	HUD_DRAW);
 	CMD3(CCC_Mask,				"hud_crosshair_build",	&psHUD_Flags,	HUD_CROSSHAIR_BUILD); // билдокурсор
-	CMD3( CCC_Mask, "hud_small_font", &psHUD_Flags, HUD_SMALL_FONT); // использовать уменьшенный размер шрифта
+	CMD3( CCC_Mask,				"hud_small_font",		&psHUD_Flags,	HUD_SMALL_FONT); // использовать уменьшенный размер шрифта
 
 	// hud
 	psHUD_Flags.set(HUD_CROSSHAIR,		true);
@@ -1193,7 +1193,7 @@ void CCC_RegisterCommands()
 	CMD1(CCC_DemoPlay,			"demo_play"				);
 	CMD1(CCC_DemoRecord,		"demo_record"			);
 
-#ifndef MASTER_GOLD
+//#ifndef MASTER_GOLD
 	// ai
 	CMD3(CCC_Mask,				"mt_ai_vision",			&g_mt_config,	mtAiVision);
 	CMD3(CCC_Mask,				"mt_level_path",		&g_mt_config,	mtLevelPath);
@@ -1203,7 +1203,7 @@ void CCC_RegisterCommands()
 	CMD3(CCC_Mask,				"mt_bullets",			&g_mt_config,	mtBullets);
 	CMD3(CCC_Mask,				"mt_level_sounds",		&g_mt_config,	mtLevelSounds);
 	CMD3(CCC_Mask,				"mt_alife",				&g_mt_config,	mtALife);
-#endif // MASTER_GOLD
+//#endif // MASTER_GOLD
 
 #ifdef DEBUG
 	CMD3(CCC_Mask,				"ai_debug",				&psAI_Flags,	aiDebug);
